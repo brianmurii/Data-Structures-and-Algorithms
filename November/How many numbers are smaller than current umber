@@ -1,0 +1,6 @@
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+            indices = {}
+            for ids, num in enumerate(sorted(nums)):
+                indices.setdefault(num, ids)
+            return [indices[num] for num in nums]
